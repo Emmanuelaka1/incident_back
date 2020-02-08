@@ -221,7 +221,8 @@ public class AssetServiceImplIntegrationTest {
 		String datecreation = sdf2.format(new Date());
 		a.setDateEnreg(datecreation);
 
-		Asset found = assetService.saveAsset("Modele 33", "Type 33", "bc 0014", "DISPONIBLE", "CH 3012341",
+		Asset found = assetService.saveAsset("Modele 33", "Type"
+				+ " 33", "bc 0014", "DISPONIBLE", "CH 3012341",
 				"22-12-2019", "Monaco 3", "ras not 2", "kris koko 2", "fidele");
 
 		assertThat(found).isEqualTo(a);
